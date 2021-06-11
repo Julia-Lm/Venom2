@@ -4,8 +4,12 @@ body{
     background-color:#14131A;
 }
 .conteiner{
-    max-width: 1140px;
+   /* max-width: 1140px;*/
+    width: 90%;
     margin: 0 auto;
+}
+.img {
+    max-width: 100%;
 }
 .header{
     display: flex;
@@ -16,6 +20,9 @@ body{
 .logo-link {
     display: inline-block;
     margin-right: 50px;
+}
+.menu-button{
+    display: none;
 }
 .nav-menu{
     margin: 0;
@@ -35,14 +42,17 @@ body{
     font-size: 24px;
     line-height: 28px;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 38px;
+    margin-bottom: 2%;
 }
 .film-description{
-    margin-top: 40px;
+    margin-top: 3%;
     max-width: 423px;
     font-size: 16px;
     line-height: 140%;
     color: rgba(255, 255, 255, 0.8);
+}
+.film-logo{
+    max-width: 70%;
 }
 .button{
     padding: 15px 30px;
@@ -68,15 +78,18 @@ body{
     color: #fff;
 }
 .button-group{
-    margin-top: 70px;
+    margin-top: 5%;
 }
 .venom{
     position: absolute;
     top: 0;
     right: 0;
+    max-width: 728px;
+    width: 50%;
 }
 .blood{
-    background: url("../img/blood.png") no-repeat top right, #14131A url("../img/background.jpg") no-repeat center center / 100%;
+    background: url("../img/blood.png") no-repeat top right / 60%, 
+    #14131A url("../img/background.jpg") no-repeat center center / 100%;
 }
 .primary-bg{
     background: #14131A url("../img/background.jpg") no-repeat center center / 100%;
@@ -142,6 +155,7 @@ body{
     height: 45px;
     border-radius: 50%;
     border: none;
+    background-color:#fff;
 }
 .trailer .play-icon{
     transform: translate(1px, 2px);
@@ -162,3 +176,129 @@ body{
 .poster-wrapper .list {
     margin: 0 0 20px 0;
 }
+.menu-close{
+    display: none;
+}
+
+/*1024px*/
+@media (max-width: 1024px){
+    .content{
+        flex-direction: column;
+        margin-bottom: 5%;
+    }
+    .col{
+        margin-bottom: 5%;
+    }
+    .header{
+        margin-bottom: 4%;
+    }
+    .film{
+        margin-top: 20%;
+    }
+}
+/*1024px*/
+
+/*768px*/
+@media (max-width: 768px){
+    .blood{
+        background: #14131A;
+    }
+    .venom{
+        top: 10%;
+    }
+    
+}
+/*768px*/
+
+/*576px*/
+@media (max-width: 576px){
+    .venom{
+        top: 20%;
+        width: 30%;
+    }
+    .nav-menu{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color:#fff;
+        z-index: 9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.2s;
+    }
+    .nav-menu-item{
+        margin: 2% 0;
+    }
+    .nav-menu-link{
+        color: #14131A;
+    }
+    .nav {
+        margin-left: auto;
+    }
+    .menu-close{
+        position: fixed;
+        opacity: 0;
+        right: 25px;
+        top: 65px;
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color:#fff;
+        z-index: 10;
+        cursor: pointer;
+        transform: translateX(300%);
+        transition: transform 0.2s;
+        transition-delay: 0.4s;
+    }
+    .is-active{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    .menu-close-text{
+        margin-right: 10px;
+    }
+    .menu-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: none;
+        background-color: #14131a;
+        cursor: pointer;
+        color:#fff;
+    }
+    .menu-button-text {
+        margin-right: 10px;
+    }
+    .button-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .film-text{
+        text-align: center;
+    }
+    .poster-wrapper{
+        flex-direction: column;
+    }
+    .poster{
+        margin-bottom: 4%;
+        margin-right: 0;
+        max-width: 350px;
+        width: 100%;
+    }
+    .content .trailer{
+        max-width: 350px;
+        width: 100%;
+    }
+    .colum-2{
+        column-count: 1;
+    }
+}
+/*576px*/

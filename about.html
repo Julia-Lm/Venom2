@@ -13,16 +13,26 @@
 <body class="primary-bg">
     <div class="conteiner">
         <header class="header">
-            <a href="/" class="logo-link">
+            <a href="index.html" class="logo-link">
             <img width="46" height="71" src="img/logo.png" alt="logo: venom" class="logo-image">
         </a>
         <nav class="nav">
+            <button class="menu-button">
+                <span class="menu-button-text">меню</span>
+                <img src="img/menu.svg" alt="icon: burger menu" class="menu-button-icon">
+            </button>
+            <!-- /.menu-button -->
+            <button class="menu-close">
+                <span class="menu-close-text">закрыть</span>
+                <img src="img/arrow.svg" alt="icon: arrow right" class="menu-close-icon">
+            </button>
+            <!-- /.menu-close -->
             <ul class="nav-menu">
                 <li class="nav-menu-item">
                     <a href="about.html" class="nav-menu-link"> o фильме</a>
                 </li>
                 <li class="nav-menu-item">
-                    <a href="#" class="nav-menu-link"> трейлер</a>
+                    <a data-fancybox href="https://www.youtube.com/watch?v=Othd8W8o3t0" class="nav-menu-link"> трейлер</a>
                 </li>
                 <li class="nav-menu-item">
                     <a href="#" class="nav-menu-link"> актеры</a>
@@ -55,9 +65,11 @@
                     <li class="list-item">Пегги Лу</li>
                 </ul>
                 <div class="trailer">
-                    <button class="play">
-                        <img src="img/play.svg" alt="icon: play" class="play-icon">
-                    </button>
+                    <a data-fancybox href="https://www.youtube.com/watch?v=Othd8W8o3t0">
+                        <button class="play">
+                            <img src="img/play.svg" alt="icon: play" class="play-icon">
+                        </button>
+                    </a>
                 </div>
                 <!-- /.trailer -->
 
@@ -96,5 +108,11 @@
     </div>
     <!-- /.conteiner -->
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
