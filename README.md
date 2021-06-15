@@ -1,8 +1,13 @@
 # Venom2
 
 Используемые технологии:
-HTML
-CSS
-JavaScript
+
+-HTML
+
+-CSS
+
+-JavaScript
+
+
 
 Адаптивность под мобильные устройства
